@@ -20,20 +20,19 @@
 }
 
 body {
-  max-width: fit-content;
+  /* max-width: fit-content; */
   height: fit-content;
   display: flex;
   flex-direction: column;
   color: var(--very-dark-blue);
   justify-content: center;
   align-items: center;
+  /* overflow-x: hidden; */
 }
 
 .container {
   display: flex;
   flex-direction: column;
-
-  width: 100%;
 }
 
 .header,
@@ -42,15 +41,27 @@ nav {
 }
 
 nav {
-  gap: 3rem;
-
   font-weight: 400;
   font-family: "Raleway", sans-serif;
+  gap: 2rem;
+  width: 10%;
+}
+
+.fylo11 {
+  width: 10%;
+  height: fit-content;
+  min-width: 11.25rem;
 }
 
 .header {
   justify-content: space-between;
   padding: 3rem 3rem 0 3rem;
+  gap: 5rem;
+  width: 100%;
+}
+
+.sign-in {
+  white-space: nowrap;
 }
 
 .desc {
@@ -63,24 +74,31 @@ nav {
   align-items: center;
   padding: 3rem 3rem 0 3rem;
   margin-bottom: 5rem;
+  width: 100%;
 }
+
+/* .top img {
+  max-width: 100%; 
+  height: auto; 
+} */
 
 .text-input-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 50%;
+  width: 100%;
 }
 
 .people-folder,
 .folder2 {
-  width: 50%;
+  width: 100%;
   height: fit-content;
   padding: 2rem;
+  min-width: 21.875rem;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
 
   font-family: "Raleway", sans-serif;
@@ -152,7 +170,7 @@ a {
 .kyle-ceo {
   display: flex;
   gap: 1rem;
-  font-size: 12px;
+  font-size: 0.75rem;
   align-items: center;
   margin-top: 1rem;
 }
@@ -197,17 +215,20 @@ a {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 0.1rem;
+  padding: 1rem 1.5rem;
 }
 
 .second-button {
-  width: 20%;
+  white-space: nowrap;
+  width: fit-content;
+  padding: 1rem 1.5rem;
 }
 
 .footer {
   display: flex;
   background-color: var(--very-dark-blue);
   color: white;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 3rem;
 }
 
@@ -222,6 +243,24 @@ a {
 .col4 {
   display: flex;
   gap: 1rem;
+}
+
+.col4 svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  object-fit: cover;
+}
+
+.lucide-instagram,
+.lucide-twitter,
+.lucide-facebook {
+  overflow: visible;
 }
 
 .attribution {
@@ -240,31 +279,18 @@ a {
   text-decoration: underline;
 }
 
-.facebook,
-.twitter {
-  background-color: #fff;
-  border: 1px solid white;
-}
-
-.insta {
-  background-color: inherit;
-  border: 2px solid white;
-  padding: 0.3rem;
-}
-.facebook,
-.twitter,
-.insta {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-}
-
 .phone,
 .email {
   display: flex;
   gap: 0.5rem;
   justify-content: flex-start;
   align-items: center;
+}
+
+.logo2 {
+  filter: grayscale(100%) brightness(0.1%) invert(1);
+  min-width: 12.5rem;
+  height: fit-content;
 }
 
 /* pseudo-selectors */
@@ -292,35 +318,35 @@ button:hover {
   transition: all 0.3s ease 0s;
 }
 
-.facebook:hover,
-.twitter:hover,
-.insta:hover {
-  background-color: var(--bright-blue);
+.col4 svg:hover {
+  stroke: hsl(224, 97%, 66%);
+  border-color: hsl(224, 97%, 66%);
   cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.facebook:hover,
-.twitter:hover {
-  border: 1px solid var(--bright-blue);
-}
-
-.insta:hover {
-  border: 2px solid var(--bright-blue);
+  transition: all 0.2s ease 0s;
 }
 
 /* media query */
 
 @media only screen and (max-width: 768px) {
-  body {
-    height: fit-content;
-    width: 100vw;
-  }
+  /* body {
+    padding: 1rem;
+  } */
+
   .container {
-    max-width: fit-content;
+    width: 100%;
   }
-  
-    .top {
+
+  .header {
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 1rem; /* Adicionando um espaçamento superior */
+  }
+
+  .top {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -367,7 +393,7 @@ button:hover {
     margin-bottom: 0.5rem;
   }
   .quote1 {
-    margin: 0 auto;
+    width: 100%;
   }
   .bottom {
     flex-direction: column;
