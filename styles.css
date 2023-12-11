@@ -20,19 +20,18 @@
 }
 
 body {
-  /* max-width: fit-content; */
   height: fit-content;
   display: flex;
   flex-direction: column;
   color: var(--very-dark-blue);
   justify-content: center;
   align-items: center;
-  /* overflow-x: hidden; */
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .header,
@@ -77,11 +76,6 @@ nav {
   width: 100%;
 }
 
-/* .top img {
-  max-width: 100%; 
-  height: auto; 
-} */
-
 .text-input-container {
   display: flex;
   flex-direction: column;
@@ -96,6 +90,8 @@ nav {
   padding: 2rem;
   min-width: 21.875rem;
 }
+
+
 
 .title {
   font-size: 1.875rem;
@@ -337,13 +333,17 @@ button:hover {
   }
 
   .header {
-    justify-content: space-between;
-    padding: 3rem;
+    /* justify-content: space-between; */
+    padding: 1rem;
+  }
+
+  .fylo11 {
+    width: 25%;
   }
 
   nav {
     width: 100%;
-    margin-top: 1rem; /* Adicionando um espaçamento superior */
+    align-items: center;
   }
 
   .top {
@@ -351,13 +351,31 @@ button:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 1rem;
+    text-align: center;
   }
   .people-folder {
     order: -1;
-    width: 50%;
-    height: auto;
-    padding: 2rem;
+    /* width: 50%; */
+    /* height: fit-content; */
+    /* padding: 2rem; */
   }
+
+  .folder2 {
+    order: -1;
+  }
+
+  .people-folder,
+  .folder2 {
+    width: 90%;
+    height: fit-content;
+    padding: 0;
+  }
+
+  .title2 {
+    font-size: large;
+  }
+
   .desc {
     align-items: center;
     width: 100%;
@@ -400,13 +418,21 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding: 2rem;
   }
+
   .buttontest {
     align-items: center;
+    width: 100%;
   }
-  .second-button {
-    width: 50%;
+
+  .second-button,
+  .second-input {
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.8rem;
   }
+
   .footer {
     flex-direction: column;
     gap: 3rem;
@@ -415,5 +441,9 @@ button:hover {
     display: flex;
     width: 30%;
     padding-bottom: 2rem;
+  }
+
+  .col4 {
+    justify-content: center;
   }
 }
